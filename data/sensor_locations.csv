@@ -1,0 +1,28 @@
+device_id,lat,lon,location_display_name
+001,15.67,-96.5,Costa central de Oaxaca
+002,15.86,-97.07,"Puerto Escondido, Oaxaca"
+003,16.35,-98.05,"Pinotepa Nacional, Oaxaca"
+005,16.44,-95.02,"Juchitan, Oaxaca"
+006,16.68,-98.4,Limite Guerrero Oaxaca
+007,16.32,-95.24,"Tehuantepec, Oaxaca"
+008,16.61,-98.98,Costa Chica Guerrero
+009,16.72,-99.12,Costa Chica Guerrero
+010,16.79,-99.39,Costa Chica Guerrero
+011,16.84,-99.9,"Acapulco, Guerrero"
+012,16.36,-94.19,Limite Oaxaca Chiapas
+013,16.36,-94.19,Limite Oaxaca Chiapas
+014,16.87,-99.89,"Acapulco, Guerrero"
+015,17.01,-100.09,Costa Grande Guerrero
+016,16.01,-97.45,Costa central de Oaxaca
+017,17.23,-100.63,Costa Grande Guerrero
+018,17.26,-100.88,Costa Grande Guerrero
+019,17.27,-101.05,Costa Grande Guerrero
+020,17.54,-101.28,Costa Grande Guerrero
+021,17.64,-101.48,"Zihuatanaejo, Guerrero"
+022,17.64,-101.57,"Zihuatanaejo, Guerrero"
+023,17.65,-101.55,"Zihuatanaejo, Guerrero"
+024,17.98,-101.81,Costa Grande Guerrero limite con Michoacan
+026,18.72,-98.78,Jantetelco
+027,19.05,-98.27,Cholula
+029,18.96,-99.24,Cuernavaca
+999,16.01,-97.45,Costa central de Oaxaca

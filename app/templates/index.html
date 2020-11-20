@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<link href="https://unpkg.com/tabulator-tables@4.8.4/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.8.4/dist/js/tabulator.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+
+
+<title>Earthquake Locations</title>
+<style>
+
+/*folium brins in a bunch of bootstrap settings that i don't want and i have to force the margins*/
+p, h1, table, form {
+	margin-left: 10px !important;
+}
+
+.flex-container {
+	display: flex;
+	align-items: center;
+}
+.map{
+	width:800px;
+	height:600px;
+	margin:auto;
+}
+
+
+table {
+	border-collapse: collapse;
+}
+
+form {
+	display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Earthquake Prediction in Mexico</h1>
+
+<p>Click on an earthquake in the table below to see its actual location and its predicted location.</p>
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<div id="earthquakes", style="width:600px;margin-left:auto; margin-right:0px"> </div>
+
+</div>
+
+<div class="col-lg-6">
+<div class="flex-container map">
+{% include 'all_quakes.html' %}
+
+</div>
+</div>
+</div>
+
+<form id="row_form" action="/predict">
+	selected row: <input id="row_selected" type="number" name="row">
+</form>
+
+<script type="text/javascript">
+//This was modified from Tabulator's example quickstart code.
+var table = new Tabulator("#earthquakes", {
+	index:"index",
+ 	height:600,
+ 	data: {{tabulator_table | safe }},
+ 	layout:"fitColumns", 
+ 	columns:[{title:"Earthquake Date", field:"utc_datetime", 
+ 	sorter:"date", sorterParams:{format:"YYYY-MM-DD",alignEmptyValues:"top",}, 
+ 	formatter:"datetime", formatterParams:{outputFormat:"YYYY-MM-DD"}},
+	 	{title:"Magnitude", field:"magnitude"},
+	 	{title:"Latitude", field:"latitude"},
+	 	{title:"Longitude", field:"longitude"},
+	 	{title:"State", field:"state"},
+	 
+ 	],
+ 	rowClick:function(e, row){ //trigger an alert message when the row is clicked
+ 		document.getElementById("row_selected").value=row.getIndex()
+ 		document.getElementById("row_form").submit();
+
+ 	},
+});
+	
+</script>
+
+
+
+
+
+</body>
+</html>
