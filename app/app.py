@@ -7,7 +7,7 @@ import folium
 import pickle
 from geopy import distance
 
-preds_df=pd.read_pickle('..\\data\\pickled_files\\predictions.p')
+preds_df=pd.read_pickle('predictions.p')
 display_df=preds_df[['magnitude', 'depth', 'latitude', 'longitude', 'utc_datetime', "state"]]
 
 #add a manual index column due to json/tabulator quirks.
