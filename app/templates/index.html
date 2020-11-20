@@ -74,7 +74,7 @@ var table = new Tabulator("#earthquakes", {
  	height:600,
  	data: {{tabulator_table | safe }},
  	layout:"fitColumns", 
- 	columns:[{title:"Earthquake Date", field:"utc_datetime", 
+ 	columns:[{title:"Date", field:"utc_datetime", 
  	sorter:"date", sorterParams:{format:"YYYY-MM-DD",alignEmptyValues:"top",}, 
  	formatter:"datetime", formatterParams:{outputFormat:"YYYY-MM-DD"}},
 	 	{title:"Magnitude", field:"magnitude"},
