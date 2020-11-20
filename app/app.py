@@ -13,7 +13,7 @@ display_df=preds_df[['magnitude', 'depth', 'latitude', 'longitude', 'utc_datetim
 #add a manual index column due to json/tabulator quirks.
 display_df['index']=display_df.index
 display_json=display_df.to_json(orient='records', date_format='iso')
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__)
 
 
 #==============================FUNCTIONS================================================
