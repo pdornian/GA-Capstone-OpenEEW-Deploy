@@ -1,3 +1,7 @@
+The following is the final project I completed for General Assembly's Data Science Intensive program. 
+
+**The remainder of the readme below is left unchanged from our project's submission.**
+
 # Predicting Earthquake Location From Accelerometer Data
 
 ## Introduction
